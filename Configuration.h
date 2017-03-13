@@ -93,8 +93,8 @@
 #define EXT0_DIR2_PIN ORIG_E0_DIR_PIN
 #define EXT0_INVERSE2 0
 #define EXT0_ENABLE2_PIN ORIG_E0_ENABLE_PIN
-#define EXT0_MAX_FEEDRATE 50
-#define EXT0_MAX_START_FEEDRATE 20
+#define EXT0_MAX_FEEDRATE 100
+#define EXT0_MAX_START_FEEDRATE 40
 #define EXT0_MAX_ACCELERATION 5000
 #define EXT0_HEAT_MANAGER 3
 #define EXT0_WATCHPERIOD 1
@@ -157,14 +157,14 @@
 
 // ############# Heated bed configuration ########################
 
-#define HAVE_HEATED_BED 0
+#define HAVE_HEATED_BED 1
 #define HEATED_BED_MAX_TEMP 120
 #define SKIP_M190_IF_WITHIN 3
 #define HEATED_BED_SENSOR_TYPE 1
 #define HEATED_BED_SENSOR_PIN TEMP_1_PIN
 #define HEATED_BED_HEATER_PIN HEATER_1_PIN
 #define HEATED_BED_SET_INTERVAL 5000
-#define HEATED_BED_HEAT_MANAGER 0
+#define HEATED_BED_HEAT_MANAGER 1
 #define HEATED_BED_PID_INTEGRAL_DRIVE_MAX 255
 #define HEATED_BED_PID_INTEGRAL_DRIVE_MIN 80
 #define HEATED_BED_PID_PGAIN_OR_DEAD_TIME   196
@@ -256,7 +256,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define max_software_endstop_z false
 #define ENDSTOP_X_BACK_MOVE 5
 #define ENDSTOP_Y_BACK_MOVE 5
-#define ENDSTOP_Z_BACK_MOVE 2
+#define ENDSTOP_Z_BACK_MOVE 5
 #define ENDSTOP_X_RETEST_REDUCTION_FACTOR 3
 #define ENDSTOP_Y_RETEST_REDUCTION_FACTOR 3
 #define ENDSTOP_Z_RETEST_REDUCTION_FACTOR 3
@@ -280,13 +280,13 @@ It also can add a delay to wait for spindle to run on full speed.
 #define X_HOME_DIR -1
 #define Y_HOME_DIR -1
 #define Z_HOME_DIR 1
-#define X_MAX_LENGTH 200
+#define X_MAX_LENGTH 214
 #define Y_MAX_LENGTH 200
-#define Z_MAX_LENGTH 217
+#define Z_MAX_LENGTH 277.73
 #define X_MIN_POS 0
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
-#define DISTORTION_CORRECTION 1
+#define DISTORTION_CORRECTION 0
 #define DISTORTION_CORRECTION_POINTS 5
 #define DISTORTION_CORRECTION_R 90
 #define DISTORTION_PERMANENT 1
@@ -304,7 +304,7 @@ It also can add a delay to wait for spindle to run on full speed.
 // ##########################################################################################
 
 #define FEATURE_BABYSTEPPING 1
-#define BABYSTEP_MULTIPLICATOR 1
+#define BABYSTEP_MULTIPLICATOR 4
 
 #define DELTA_SEGMENTS_PER_SECOND_PRINT 180 // Move accurate setting for print moves
 #define DELTA_SEGMENTS_PER_SECOND_MOVE 70 // Less accurate setting for other moves
@@ -322,15 +322,15 @@ It also can add a delay to wait for spindle to run on full speed.
 #define DELTA_DIAGONAL_CORRECTION_B 0
 #define DELTA_DIAGONAL_CORRECTION_C 0
 #define END_EFFECTOR_HORIZONTAL_OFFSET 0
-#define CARRIAGE_HORIZONTAL_OFFSET 0
+#define CARRIAGE_HORIZONTAL_OFFSET (28-4.5)
 #define DELTA_MAX_RADIUS 125
 #define ROD_RADIUS 150
-#define PRINTER_RADIUS 150
+#define PRINTER_RADIUS 154.5
 #define DELTA_HOME_ON_POWER 0
 #define STEP_COUNTER
-#define DELTA_X_ENDSTOP_OFFSET_STEPS 0
-#define DELTA_Y_ENDSTOP_OFFSET_STEPS 0
-#define DELTA_Z_ENDSTOP_OFFSET_STEPS 0
+#define DELTA_X_ENDSTOP_OFFSET_STEPS 181.6 //-2.27 * 80
+#define DELTA_Y_ENDSTOP_OFFSET_STEPS 250.4 //-3.13 * 80
+#define DELTA_Z_ENDSTOP_OFFSET_STEPS 4 //-.05 * 80
 #define DELTA_FLOOR_SAFETY_MARGIN_MM 15
 //#define SOFTWARE_LEVELING
 
@@ -368,7 +368,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define INTERPOLATE_ACCELERATION_WITH_Z 0
 #define ACCELERATION_FACTOR_TOP 100
 #define MAX_JERK 20
-#define MAX_ZJERK 0.3
+#define MAX_ZJERK 20 //0.3
 #define PRINTLINE_CACHE_SIZE 16
 #define MOVE_CACHE_LOW 10
 #define LOW_TICKS_PER_MOVE 250000
@@ -391,7 +391,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define Z3_DIR_PIN    ORIG_E2_DIR_PIN
 #define Z3_ENABLE_PIN ORIG_E2_ENABLE_PIN
 #define FEATURE_DITTO_PRINTING 0
-#define USE_ADVANCE 0
+#define USE_ADVANCE 1
 #define ENABLE_QUADRATIC_ADVANCE 0
 
 
@@ -512,7 +512,7 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define UI_DISABLE_AUTO_PAGESWITCH 1
 #define UI_AUTORETURN_TO_MENU_AFTER 30000
 #define FEATURE_UI_KEYS 0
-#define UI_ENCODER_SPEED 1
+#define UI_ENCODER_SPEED 2
 #define UI_REVERSE_ENCODER 0
 #define UI_KEY_BOUNCETIME 10
 #define UI_KEY_FIRST_REPEAT 500
@@ -578,8 +578,8 @@ Values must be in range 1..255
             "sensorType": 1,
             "sensorPin": "TEMP_0_PIN",
             "heaterPin": "HEATER_0_PIN",
-            "maxFeedrate": 50,
-            "startFeedrate": 20,
+            "maxFeedrate": 100,
+            "startFeedrate": 40,
             "invert": "0",
             "invertEnable": "0",
             "acceleration": 5000,
@@ -592,7 +592,7 @@ Values must be in range 1..255
             "waitRetractTemp": 150,
             "waitRetractUnits": 0,
             "waitRetract": 0,
-            "stepsPerMM": 370,
+            "stepsPerMM": 100,
             "coolerPin": -1,
             "coolerSpeed": 255,
             "selectCommands": "",
@@ -758,7 +758,7 @@ Values must be in range 1..255
     "servo2Pin": -1,
     "servo3Pin": -1,
     "featureWatchdog": "1",
-    "hasHeatedBed": "0",
+    "hasHeatedBed": "1",
     "enableZProbing": "1",
     "extrudeMaxLength": 160,
     "homeOrder": "HOME_ORDER_ZXY",
@@ -792,7 +792,7 @@ Values must be in range 1..255
     "bedSensorType": 1,
     "bedSensorPin": "TEMP_1_PIN",
     "bedHeaterPin": "HEATER_1_PIN",
-    "bedHeatManager": 0,
+    "bedHeatManager": 1,
     "bedUpdateInterval": 5000,
     "bedPidDriveMin": 80,
     "bedPidDriveMax": 255,
