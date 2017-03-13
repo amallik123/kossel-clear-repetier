@@ -43,6 +43,8 @@
 // ################## EDIT THESE SETTINGS MANUALLY ################
 // ################ END MANUAL SETTINGS ##########################
 
+#undef FAN_PIN
+#define FAN_PIN 9
 #undef FAN_BOARD_PIN
 #define FAN_BOARD_PIN -1
 #define BOARD_FAN_SPEED 255
@@ -111,7 +113,7 @@
 #define EXT0_WAIT_RETRACT_UNITS 0
 #define EXT0_SELECT_COMMANDS ""
 #define EXT0_DESELECT_COMMANDS ""
-#define EXT0_EXTRUDER_COOLER_PIN -1
+#define EXT0_EXTRUDER_COOLER_PIN 6
 #define EXT0_EXTRUDER_COOLER_SPEED 255
 #define EXT0_DECOUPLE_TEST_PERIOD 12000
 #define EXT0_JAM_PIN -1
@@ -368,7 +370,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define INTERPOLATE_ACCELERATION_WITH_Z 0
 #define ACCELERATION_FACTOR_TOP 100
 #define MAX_JERK 20
-#define MAX_ZJERK 20 //0.3
+#define MAX_ZJERK 20
 #define PRINTLINE_CACHE_SIZE 16
 #define MOVE_CACHE_LOW 10
 #define LOW_TICKS_PER_MOVE 250000
@@ -593,7 +595,7 @@ Values must be in range 1..255
             "waitRetractUnits": 0,
             "waitRetract": 0,
             "stepsPerMM": 100,
-            "coolerPin": -1,
+            "coolerPin": 6,
             "coolerSpeed": 255,
             "selectCommands": "",
             "deselectCommands": "",
@@ -856,7 +858,7 @@ Values must be in range 1..255
     "forceChecksum": "0",
     "sdExtendedDir": "1",
     "featureFanControl": "1",
-    "fanPin": "ORIG_FAN_PIN",
+    "fanPin": 9,
     "featureFan2Control": "0",
     "fan2Pin": "ORIG_FAN2_PIN",
     "fanThermoPin": -1,
@@ -1107,5 +1109,3 @@ Values must be in range 1..255
 ========== End configuration string ==========
 
 */
-
-
