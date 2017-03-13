@@ -246,7 +246,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define ENDSTOP_PULLUP_Z_MAX true
 #define ENDSTOP_Z_MAX_INVERTING false
 #define MAX_HARDWARE_ENDSTOP_Z true
-#define max_software_endstop_r true
+#define max_software_endstop_r false
 
 #define min_software_endstop_x true
 #define min_software_endstop_y true
@@ -277,12 +277,12 @@ It also can add a delay to wait for spindle to run on full speed.
 #define INVERT_X_DIR 0
 #define INVERT_Y_DIR 0
 #define INVERT_Z_DIR 0
-#define X_HOME_DIR -1
-#define Y_HOME_DIR -1
+#define X_HOME_DIR 1
+#define Y_HOME_DIR 1
 #define Z_HOME_DIR 1
 #define X_MAX_LENGTH 214
 #define Y_MAX_LENGTH 200
-#define Z_MAX_LENGTH 277.73
+#define Z_MAX_LENGTH 272.30
 #define X_MIN_POS 0
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
@@ -328,9 +328,9 @@ It also can add a delay to wait for spindle to run on full speed.
 #define PRINTER_RADIUS 154.5
 #define DELTA_HOME_ON_POWER 0
 #define STEP_COUNTER
-#define DELTA_X_ENDSTOP_OFFSET_STEPS 181.6 //-2.27 * 80
-#define DELTA_Y_ENDSTOP_OFFSET_STEPS 250.4 //-3.13 * 80
-#define DELTA_Z_ENDSTOP_OFFSET_STEPS 4 //-.05 * 80
+#define DELTA_X_ENDSTOP_OFFSET_STEPS 64 //auto
+#define DELTA_Y_ENDSTOP_OFFSET_STEPS 173 //auto
+#define DELTA_Z_ENDSTOP_OFFSET_STEPS 0 //auto
 #define DELTA_FLOOR_SAFETY_MARGIN_MM 15
 //#define SOFTWARE_LEVELING
 
@@ -441,23 +441,23 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define Z_PROBE_ON_HIGH 1
 #define Z_PROBE_X_OFFSET 0
 #define Z_PROBE_Y_OFFSET 0
-#define Z_PROBE_WAIT_BEFORE_TEST 1
+#define Z_PROBE_WAIT_BEFORE_TEST 0
 #define Z_PROBE_SPEED 4
-#define Z_PROBE_XY_SPEED 150
-#define Z_PROBE_SWITCHING_DISTANCE 1.5
+#define Z_PROBE_XY_SPEED 450
+#define Z_PROBE_SWITCHING_DISTANCE 3
 #define Z_PROBE_REPETITIONS 5
-#define Z_PROBE_HEIGHT -3.4
+#define Z_PROBE_HEIGHT 3
 #define Z_PROBE_START_SCRIPT ""
 #define Z_PROBE_FINISHED_SCRIPT ""
 #define Z_PROBE_REQUIRES_HEATING 0
 #define Z_PROBE_MIN_TEMPERATURE 150
 #define FEATURE_AUTOLEVEL 1
-#define Z_PROBE_X1 20
-#define Z_PROBE_Y1 20
-#define Z_PROBE_X2 160
+#define Z_PROBE_X1 -20
+#define Z_PROBE_Y1 -20
+#define Z_PROBE_X2 75
 #define Z_PROBE_Y2 20
-#define Z_PROBE_X3 100
-#define Z_PROBE_Y3 160
+#define Z_PROBE_X3 75
+#define Z_PROBE_Y3 75
 #define BED_LEVELING_METHOD 0
 #define BED_CORRECTION_METHOD 0
 #define BED_LEVELING_GRID_SIZE 5
@@ -689,7 +689,7 @@ Values must be in range 1..255
     "deltaSegmentsPerSecondPrint": 180,
     "deltaSegmentsPerSecondTravel": 70,
     "deltaDiagonalRod": 288.17,
-    "deltaHorizontalRadius": 150,
+    "deltaHorizontalRadius": 154.5,
     "deltaAlphaA": 210,
     "deltaAlphaB": 330,
     "deltaAlphaC": 90,
@@ -873,7 +873,7 @@ Values must be in range 1..255
     "zProbeOnHigh": "1",
     "zProbeXOffset": 0,
     "zProbeYOffset": 0,
-    "zProbeWaitBeforeTest": "1",
+    "zProbeWaitBeforeTest": "0",
     "zProbeSpeed": 4,
     "zProbeXYSpeed": 150,
     "zProbeHeight": -3.4,
@@ -1107,3 +1107,5 @@ Values must be in range 1..255
 ========== End configuration string ==========
 
 */
+
+
