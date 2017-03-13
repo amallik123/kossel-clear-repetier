@@ -44,7 +44,7 @@
 // ################ END MANUAL SETTINGS ##########################
 
 #undef FAN_PIN
-#define FAN_PIN 9
+#define FAN_PIN 11
 #undef FAN_BOARD_PIN
 #define FAN_BOARD_PIN -1
 #define BOARD_FAN_SPEED 255
@@ -858,7 +858,7 @@ Values must be in range 1..255
     "forceChecksum": "0",
     "sdExtendedDir": "1",
     "featureFanControl": "1",
-    "fanPin": 9,
+    "fanPin": 11,
     "featureFan2Control": "0",
     "fan2Pin": "ORIG_FAN2_PIN",
     "fanThermoPin": -1,

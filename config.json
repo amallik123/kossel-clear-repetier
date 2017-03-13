@@ -302,7 +302,7 @@
     "forceChecksum": "0",
     "sdExtendedDir": "1",
     "featureFanControl": "1",
-    "fanPin": 9,
+    "fanPin": 11,
     "featureFan2Control": "0",
     "fan2Pin": "ORIG_FAN2_PIN",
     "fanThermoPin": -1,
