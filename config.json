@@ -135,7 +135,7 @@
     "deltaSegmentsPerSecondPrint": 180,
     "deltaSegmentsPerSecondTravel": 70,
     "deltaDiagonalRod": 288.17,
-    "deltaHorizontalRadius": 160,
+    "deltaHorizontalRadius": 150,
     "deltaAlphaA": 210,
     "deltaAlphaB": 330,
     "deltaAlphaC": 90,

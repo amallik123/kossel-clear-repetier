@@ -63,9 +63,9 @@
 #define MIXING_EXTRUDER 0
 
 #define DRIVE_SYSTEM 3
-#define XAXIS_STEPS_PER_MM 100
-#define YAXIS_STEPS_PER_MM 100
-#define ZAXIS_STEPS_PER_MM 100
+#define XAXIS_STEPS_PER_MM 80
+#define YAXIS_STEPS_PER_MM 80
+#define ZAXIS_STEPS_PER_MM 80
 #define EXTRUDER_FAN_COOL_TEMP 50
 #define PDM_FOR_EXTRUDER 0
 #define PDM_FOR_COOLER 0
@@ -79,7 +79,7 @@
 #define EXT0_X_OFFSET 0
 #define EXT0_Y_OFFSET 0
 #define EXT0_Z_OFFSET 0
-#define EXT0_STEPS_PER_MM 370
+#define EXT0_STEPS_PER_MM 100
 #define EXT0_TEMPSENSOR_TYPE 1
 #define EXT0_TEMPSENSOR_PIN TEMP_0_PIN
 #define EXT0_HEATER_PIN HEATER_0_PIN
@@ -323,7 +323,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define DELTA_DIAGONAL_CORRECTION_C 0
 #define END_EFFECTOR_HORIZONTAL_OFFSET 0
 #define CARRIAGE_HORIZONTAL_OFFSET 0
-#define DELTA_MAX_RADIUS 100
+#define DELTA_MAX_RADIUS 125
 #define ROD_RADIUS 150
 #define PRINTER_RADIUS 150
 #define DELTA_HOME_ON_POWER 0
@@ -558,9 +558,9 @@ Values must be in range 1..255
     "baudrate": 250000,
     "bluetoothSerial": -1,
     "bluetoothBaudrate": 115200,
-    "xStepsPerMM": 100,
-    "yStepsPerMM": 100,
-    "zStepsPerMM": 100,
+    "xStepsPerMM": 80,
+    "yStepsPerMM": 80,
+    "zStepsPerMM": 80,
     "xInvert": 0,
     "xInvertEnable": 0,
     "eepromMode": 1,
