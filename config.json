@@ -157,7 +157,7 @@
     "allowQuadstepping": "1",
     "doubleStepDelay": 0,
     "maxJerk": 20,
-    "maxZJerk": 0.3,
+    "maxZJerk": 20,
     "moveCacheSize": 16,
     "moveCacheLow": 10,
     "lowTicksPerMove": 250000,
